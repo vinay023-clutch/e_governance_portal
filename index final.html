@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National E-Governance Portal</title>
+    <meta name="description"
+        content="A state-of-the-art national e-governance portal providing access to citizen services, live updates, and resources.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style final.css">
+</head>
+
+<body>
+    <!-- Background Decorators for Premium Feel -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>    <!-- Navigation Header -->
+    <header class="glass-header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="ph-fill ph-bank"></i>
+                <div class="logo-text">
+                    <h1>E-Gov Portal</h1>
+                    <span>Citizens First</span>
+                </div>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#services" class="active">Services</a></li>
+                    <li><a href="#departments">Departments</a></li>
+                    <li><a href="#track-status">Track Status</a></li>
+                    <li><a href="#schemes">Welfare Schemes</a></li>
+                    <li><a href="#news">Live Updates</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="top-search-bar">
+                    <i class="ph ph-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark Mode">
+                    <i class="ph-fill ph-moon"></i>
+                </button>
+                <select class="lang-selector custom-select">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी (Hindi)</option>
+                    <option value="bn">বাংলা (Bengali)</option>
+                    <option value="te">తెలుగు (Telugu)</option>
+                    <option value="mr">मराठी (Marathi)</option>
+                    <option value="ta">தமிழ் (Tamil)</option>
+                    <option value="ur">اردو (Urdu)</option>
+                    <option value="gu">ગુજરાતી (Gujarati)</option>
+                    <option value="kn">ಕನ್ನಡ (Kannada)</option>
+                    <option value="or">ଓଡ଼ିଆ (Odia)</option>
+                    <option value="ml">മലയാളം (Malayalam)</option>
+                    <option value="pa">ਪੰਜਾਬੀ (Punjabi)</option>
+                    <option value="as">অসমীয়া (Assamese)</option>
+                </select>
+                <a href="#login" class="btn btn-primary">Sign In</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge">
+                        <span class="pulse-dot"></span>
+                        Unified Citizen Platform
+                    </div>
+                    <h2 class="hero-title">Empowering Citizens with <span>Digital Governance</span></h2>
+                    <p class="hero-subtitle">Access hundreds of government services seamlessly. Transparent, secure, and
+                        built for your convenience.</p>
+
+                    <div class="search-bar-wrapper glass-panel">
+                        <i class="ph ph-magnifying-glass search-icon"></i>
+                        <input type="text" placeholder="Search for birth certificate, tax filing, schemes..."
+                            aria-label="Search services">
+                        <button class="btn btn-primary">Find Services</button>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="1500">0</h4>
+                            <p>Active Services</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="24">0</h4>
+                            <p>Departments</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="98">0</h4><span>%</span>
+                            <p>Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Services Section -->
+        <section id="services" class="services py-section bg-alternate">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Citizen Services Directory</h2>
+                    <p>Streamlined access to essential government operations</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service Cards dynamically enriched -->
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.1s">
+                        <div class="icon-wrapper"><i class="ph ph-identification-card"></i></div>
+                        <h3>Identity & Documents</h3>
+                        <p>Aadhaar, Passports, Driving License, Voter ID applications.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>Select services may vary by state RTO or Local Body.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.2s">
+                        <div class="icon-wrapper"><i class="ph ph-receipt"></i></div>
+                        <h3>Taxes & Revenue</h3>
+                        <p>Income tax filing, property tax, GST enrollment and refunds.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>Property tax rules apply per local municipal corporation.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.3s">
+                        <div class="icon-wrapper"><i class="ph ph-heartbeat"></i></div>
+                        <h3>Health & Family</h3>
+                        <p>Health insurance schemes, birth certificates, vaccination booking.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>Ayushman Bharat accessible nationwide. Certificates issued locally.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.4s">
+                        <div class="icon-wrapper"><i class="ph ph-graduation-cap"></i></div>
+                        <h3>Education & Skills</h3>
+                        <p>Scholarships, exam results, vocational training enrollment.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>State Board results vary. National scholarships universally accessible.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.5s">
+                        <div class="icon-wrapper"><i class="ph ph-briefcase"></i></div>
+                        <h3>Business & Industry</h3>
+                        <p>Company registration, MSME certificates, trade licenses.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>Trade licenses managed by respective state departments.</p>
+                        </div>
+                    </a>
+
+                    <a href="#" class="service-card glass-panel reveal" style="--delay: 0.6s">
+                        <div class="icon-wrapper"><i class="ph ph-gavel"></i></div>
+                        <h3>Law & Justice</h3>
+                        <p>E-Courts, legal aid, FIR registration, background checks.</p>
+                        <span class="card-link">Explore <i class="ph ph-arrow-right"></i></span>
+                        <div class="service-details">
+                            <h5>Available completely in 28 States & 8 UTs</h5>
+                            <p>E-FIR available for non-heinous crimes in most states.</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="text-center mt-main reveal">
+                    <button class="btn btn-outline">View All Categories</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Departments Section -->
+        <section id="departments" class="departments py-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Government Departments</h2>
+                    <p>Key administrative bodies serving the public</p>
+                </div>
+
+                <div class="departments-grid">
+                    <a href="#" class="department-card glass-panel reveal" style="--delay: 0.1s">
+                        <div class="icon-wrapper"><i class="ph ph-receipt"></i></div>
+                        <h3>Revenue Department</h3>
+                        <p>Land records, tax collection, and revenue administration.</p>
+                        <span class="card-link">Visit Department <i class="ph ph-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="#" class="department-card glass-panel reveal" style="--delay: 0.2s">
+                        <div class="icon-wrapper"><i class="ph ph-buildings"></i></div>
+                        <h3>Municipal Corporation</h3>
+                        <p>Urban planning, sanitation, and local civic amenities.</p>
+                        <span class="card-link">Visit Department <i class="ph ph-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="#" class="department-card glass-panel reveal" style="--delay: 0.3s">
+                        <div class="icon-wrapper"><i class="ph ph-bus"></i></div>
+                        <h3>Transport Department</h3>
+                        <p>Vehicle registration, licensing, and public transit.</p>
+                        <span class="card-link">Visit Department <i class="ph ph-arrow-right"></i></span>
+                    </a>
+                    
+                    <a href="#" class="department-card glass-panel reveal" style="--delay: 0.4s">
+                        <div class="icon-wrapper"><i class="ph ph-first-aid"></i></div>
+                        <h3>Health Department</h3>
+                        <p>Public healthcare, hospitals, and medical services.</p>
+                        <span class="card-link">Visit Department <i class="ph ph-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Live Updates / News Ticker Section -->
+        <section id="news" class="news py-section relative bg-alternate">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Live Updates & Announcements</h2>
+                    <p>Real-time notifications from central and state departments</p>
+                </div>
+
+                <div class="news-container full-width glass-panel reveal">
+                    <div class="news-list" id="newsList">
+                        <div class="news-item">
+                            <span class="news-tag highlight">URGENT</span>
+                            <p>Income Tax return deadline extended to September 30th.</p>
+                            <span class="news-time">10 mins ago</span>
+                        </div>
+                        <div class="news-item">
+                            <span class="news-tag">POLICY</span>
+                            <p>New subsidies announced for solar panel installations under Green initiative.</p>
+                            <span class="news-time">2 hours ago</span>
+                        </div>
+                        <div class="news-item">
+                            <span class="news-tag">UPDATE</span>
+                            <p>Digital signature mandates updated for all corporate tax filings.</p>
+                            <span class="news-time">5 hours ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="section-divider"></div>
+
+    <!-- Track Application Status Section -->
+    <section id="track-status" class="track-status-section py-section relative">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Track Application Status</h2>
+                <p>Check the real-time status of your submitted applications</p>
+            </div>
+            <div class="status-tracker-container glass-panel reveal" style="max-width: 700px; margin: 0 auto; padding: 2.5rem;">
+                <form id="trackStatusForm">
+                    <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <div class="form-group" style="flex: 1; min-width: 200px;">
+                            <label for="track-category" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Application Category</label>
+                            <select id="track-category" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-solid); background: var(--bg-main); color: var(--text-primary); font-family: var(--font-body);">
+                                <option value="" disabled selected>Select Category</option>
+                                <option value="birth">Birth Certificate</option>
+                                <option value="death">Death Certificate</option>
+                                <option value="income">Income Certificate</option>
+                                <option value="passport">Passport Services</option>
+                                <option value="license">Driving License</option>
+                                <option value="welfare">Welfare Scheme</option>
+                                <option value="grievance">Grievance</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="flex: 2; min-width: 250px;">
+                            <label for="track-app-number" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Application/Token Number</label>
+                            <div class="search-bar-wrapper" style="margin: 0; background: transparent; border: 1px solid var(--border-solid); box-shadow: none; padding: 0.25rem 0.5rem; display: flex; align-items: center;">
+                                <i class="ph ph-hash search-icon" style="color: var(--text-secondary); margin-right: 0.5rem;"></i>
+                                <input type="text" id="track-app-number" required placeholder="e.g. APP-2026-123456" style="flex: 1; border: none; outline: none; background: transparent; color: var(--text-primary); font-family: var(--font-body); padding: 0.5rem;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem; width: 100%; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                            <i class="ph ph-magnifying-glass"></i> Check Status
+                        </button>
+                    </div>
+                </form>
+
+                <div id="statusResultContainer" class="hidden" style="margin-top: 2rem; border-top: 1px solid var(--border-solid); padding-top: 2rem;">
+                    <!-- Loading State -->
+                    <div id="statusLoading" class="text-center hidden" style="padding: 2rem;">
+                        <i class="ph ph-spinner-gap pulse-dot" style="font-size: 2.5rem; color: var(--primary-color); display: inline-block; animation: spin 1s linear infinite;"></i>
+                        <p style="margin-top: 1rem; color: var(--text-secondary);">Fetching status details...</p>
+                        <style>@keyframes spin { 100% { transform: rotate(360deg); } }</style>
+                    </div>
+
+                    <!-- Result Data -->
+                    <div id="statusData" class="hidden">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                            <div>
+                                <h4 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-primary);">Application Found</h4>
+                                <p style="color: var(--text-secondary); font-size: 0.95rem;">Details for <strong id="resAppNumber" style="color: var(--text-primary);"></strong></p>
+                            </div>
+                            <div id="resStatusBadge" style="padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 0.4rem;">
+                                <!-- Badge injected via JS -->
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 1.5rem; background: var(--bg-main); border-radius: 8px; border: 1px solid var(--border-solid); overflow: hidden;">
+                            <div style="display: flex; border-bottom: 1px solid var(--border-solid);">
+                                <div style="flex: 1; padding: 1rem; border-right: 1px solid var(--border-solid);">
+                                    <span style="display: block; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Applicant</span>
+                                    <strong style="color: var(--text-primary);" id="resApplicantName"></strong>
+                                </div>
+                                <div style="flex: 1; padding: 1rem;">
+                                    <span style="display: block; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Date Submitted</span>
+                                    <strong style="color: var(--text-primary);" id="resDate"></strong>
+                                </div>
+                            </div>
+                            <div style="padding: 1rem;">
+                                <span style="display: block; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.2rem;">Latest Remarks</span>
+                                <p style="color: var(--text-primary); font-size: 0.95rem; margin-top: 0.2rem;" id="resRemarks"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grievance Section -->
+    <section id="grievance" class="grievance-section py-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Public Grievance Redressal</h2>
+                <p>Declare local complaints and track resolution status</p>
+            </div>
+            <div class="grievance-form-container glass-panel reveal"
+                style="max-width: 800px; margin: 0 auto; padding: 2.5rem;">
+                <form id="grievanceForm">
+                    <div class="form-row" style="display: flex; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div class="form-group" style="flex: 1;">
+                            <label for="g-name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full
+                                Name</label>
+                            <input type="text" id="g-name" required placeholder="John Doe"
+                                style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-solid); background: transparent; color: var(--text-primary); font-family: var(--font-body);">
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="g-state" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">State
+                                / UT</label>
+                            <select id="g-state" required
+                                style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-solid); background: var(--bg-main); color: var(--text-primary); font-family: var(--font-body);">
+                                <option value="" disabled selected>Select State</option>
+                                <option value="AP">Andhra Pradesh</option>
+                                <option value="AR">Arunachal Pradesh</option>
+                                <option value="AS">Assam</option>
+                                <option value="BR">Bihar</option>
+                                <option value="CT">Chhattisgarh</option>
+                                <option value="GA">Goa</option>
+                                <option value="GJ">Gujarat</option>
+                                <option value="HR">Haryana</option>
+                                <option value="HP">Himachal Pradesh</option>
+                                <option value="JH">Jharkhand</option>
+                                <option value="KA">Karnataka</option>
+                                <option value="KL">Kerala</option>
+                                <option value="MP">Madhya Pradesh</option>
+                                <option value="MH">Maharashtra</option>
+                                <option value="MN">Manipur</option>
+                                <option value="ML">Meghalaya</option>
+                                <option value="MZ">Mizoram</option>
+                                <option value="NL">Nagaland</option>
+                                <option value="OR">Odisha</option>
+                                <option value="PB">Punjab</option>
+                                <option value="RJ">Rajasthan</option>
+                                <option value="SK">Sikkim</option>
+                                <option value="TN">Tamil Nadu</option>
+                                <option value="TG">Telangana</option>
+                                <option value="TR">Tripura</option>
+                                <option value="UP">Uttar Pradesh</option>
+                                <option value="UT">Uttarakhand</option>
+                                <option value="WB">West Bengal</option>
+                                <option value="AN">Andaman and Nicobar Islands</option>
+                                <option value="CH">Chandigarh</option>
+                                <option value="DN">Dadra & Nagar Haveli and Daman & Diu</option>
+                                <option value="DL">Delhi</option>
+                                <option value="JK">Jammu and Kashmir</option>
+                                <option value="LA">Ladakh</option>
+                                <option value="LD">Lakshadweep</option>
+                                <option value="PY">Puducherry</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="g-address" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Street
+                            Address</label>
+                        <input type="text" id="g-address" required placeholder="123 Main Street, Locality"
+                            style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-solid); background: transparent; color: var(--text-primary); font-family: var(--font-body);">
+                    </div>
+                    <div class="form-group" style="margin-bottom: 1.5rem;">
+                        <label for="g-complaint"
+                            style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Complaint Details</label>
+                        <textarea id="g-complaint" rows="4" required placeholder="Describe your issue here..."
+                            style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-solid); background: transparent; color: var(--text-primary); font-family: var(--font-body); resize: vertical;"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem;">Submit
+                            Grievance</button>
+                    </div>
+                </form>
+
+                <div id="grievanceResult" class="grievance-result hidden" style="text-align: center; padding: 2rem;">
+                    <i class="ph-fill ph-check-circle"
+                        style="font-size: 4rem; color: var(--success-color); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Grievance Submitted Successfully</h3>
+                    <p
+                        style="font-size: 1.1rem; margin-bottom: 1.5rem; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                        Your Token Number: <strong id="tokenNumber"
+                            style="color: var(--primary-color); font-size: 1.5rem; background: rgba(37,99,235,0.1); padding: 0.25rem 0.75rem; border-radius: 8px;"></strong>
+                        <button id="copyTokenBtn" class="btn btn-outline"
+                            style="padding: 0.4rem 0.6rem; border-radius: 8px;" title="Copy Token"><i class="ph ph-copy"
+                                style="font-size: 1.25rem;"></i></button></p>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem;">Please save this token number. You can
+                        use it to track your complaint status.</p>
+                    <button id="newGrievanceBtn" class="btn btn-outline">Submit Another Complaint</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="support" class="main-footer pt-section">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <i class="ph-fill ph-bank"></i>
+                        <div class="logo-text">
+                            <h2>E-Gov Portal</h2>
+                        </div>
+                    </div>
+                    <p>Transforming public service delivery through technology. Making government accessible, efficient,
+                        and transparent.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">About E-Gov</a></li>
+                        <li><a href="#">State Dashboards</a></li>
+                        <li><a href="#">Open Data Platform</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h3>Help & Support</h3>
+                    <ul>
+                        <li><a href="#">Citizen Helpdesk</a></li>
+                        <li><a href="#">Raise a Grievance</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h3>Stay Informed</h3>
+                    <p>Subscribe to receive updates on new schemes and deadline reminders.</p>
+                    <div class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address">
+                        <button class="btn btn-primary"><i class="ph ph-paper-plane-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 National E-Governance Portal. All Rights Reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-trigger" id="chatbotTrigger" aria-label="Open AI Chatbot">
+            <i class="ph-fill ph-chat-teardrop-dots"></i>
+        </button>
+        <div class="chatbot-window glass-panel" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <i class="ph-fill ph-robot"></i>
+                    <div>
+                        <h4>E-Gov AI Assistant</h4>
+                        <span>Online</span>
+                    </div>
+                </div>
+                <button class="chatbot-close" id="chatbotClose"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="chat-message bot">
+                    <p>Namaste! I am your E-Gov Assistant. How can I help you regarding our services, welfare schemes,
+                        or grievances today?</p>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatInputText" placeholder="Type your message...">
+                <button id="chatSendBtn"><i class="ph-fill ph-paper-plane-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hidden Google Translate Element -->
+    <div id="google_translate_element" style="display:none;"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script src="script final.js"></script>
+</body>
+
+</html>
